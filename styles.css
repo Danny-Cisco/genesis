@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+canvas {
+  width: 100%;
+  height: 70%; /* new */
+  display: block;
+}
+
+div.rounded-iframe {
+  width: 100%;
+  max-height: 150px;
+  min-height: 150px;
+  overflow: hidden;
+  border-style: none;
+  border-radius: 40px;
+
+  margin-top: 5px;
+  margin-bottom: 20px;
+
+  /*background-color: rgba(255, 255, 255, 0.05);*/
+  /*box-shadow: 6px 4px 30px rgba(0, 0, 0, 0.25);*/
+}
+
+div.rounded-iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+
+#canvasContainer {
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: 1fr;
+  height: auto;
+
+  align-content: center;
+  justify-self: end;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #79c6eb;
+  background-image: radial-gradient(
+    at center center,
+    transparent 20%,
+    rgba(82, 57, 226, 0.349)
+  );
+  height: 100vh;
+  margin: 0px; /* margin around entire page*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#spacer {
+  height: 100%;
+}
+
+#titleContainer {
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 30px;
+  padding: 20px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.heading {
+  font-family: "Open Sans", sans-serif;
+  color: blue;
+  font-size: 15px; /* Adjust the font size to your desired value */
+  font-weight: normal;
+  /*text-transform: uppercase;  */
+  border: 0px dotted black;
+  border-radius: 25px;
+  padding: 0px;
+
+  margin: 10px;
+  text-align: top;
+
+  transition: color 0.2s ease, font-size 0.45s ease;
+}
+
+#flexContainer {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: space-between;*/
+  align-items: center;
+  max-width: 320px;
+  height: 100%;
+  border: 0px dotted blue;
+  margin-top: 50px;
+}
+
+#gridContainer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+
+  box-shadow: 0px 25px 15px rgba(0, 0, 0, 0.1);
+  grid-gap: 10px;
+  padding: 15px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 3fr 0.8fr; /* This creates two equal-width columns */
+  align-items: center;
+  justify-items: start; /* This will left-align the items in each cell */
+  border: 0px solid black; /* Adds a border around grid items */
+  background-color: white;
+  height: 60px;
+  border-radius: 20px;
+}
+
+.changeColorButton {
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  position: relative;
+  font-size: 12px; /* Adjust the font size to your desired value */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.2); /* Adjust the values for the desired text shadow effect */
+  background-image: linear-gradient(
+    to top left,
+    rgba(146, 116, 255, 0.897),
+    rgba(24, 69, 218, 0.829)
+  );
+  border: none; /* Remove the border */
+  height: 40px;
+  width: 60px;
+  transition: box-shadow 0.05s ease-out, color 0.05s ease-out,
+    transform 0.08s ease-out;
+  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.6);
+  margin: 10px;
+  justify-self: end;
+}
+
+.changeColorButton:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.changeColorButton:active {
+  box-shadow: -1px -6px 3px rgb(0, 0, 0); /* Adjust the values to control the shadow depth when button is active */
+  color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /* Change the color of the text while pressed */
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 1); /* Adjust the values for the desired text shadow effect */
+  background-color: rgba(0, 0, 0, 1);
+  transform: translateY(1px) scaleY(0.8) scaleX(0.97);
+}
