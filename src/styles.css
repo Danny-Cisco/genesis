@@ -16,7 +16,7 @@ div.rounded-iframe {
   border-radius: 40px;
 
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 120px;
 
   /*background-color: rgba(255, 255, 255, 0.05);*/
   /*box-shadow: 6px 4px 30px rgba(0, 0, 0, 0.25);*/
@@ -46,7 +46,7 @@ body {
     transparent 20%,
     rgba(82, 57, 226, 0.349)
   );
-  height: 100vh;
+  height: 101vh;
   margin: 0px; /* margin around entire page*/
   display: flex;
   flex-direction: column;
@@ -65,6 +65,7 @@ body {
   padding: 20px;
   min-width: 220px;
   text-align: center;
+  margin-top: 30px;
 }
 
 .heading {
@@ -162,11 +163,8 @@ body {
   ); /* Change the color of the text while pressed */
   text-shadow: 0px 0px 30px rgba(255, 255, 255, 1); /* Adjust the values for the desired text shadow effect */
   background-color: rgba(0, 0, 0, 1);
-
-
   transform: translateY(1px) scaleY(0.8) scaleX(0.97);
 }
-
 
 .heading {
   transition: color 0.3s, font-size 0.3s;
@@ -175,6 +173,10 @@ body {
 }
 
 .heading.pink {
-  color: pink;
-  font-size: 25px;
+  color: rgb(181, 32, 240);
+  font-size: 30px;
+}
+
+button {
+  user-select: none;
 }
